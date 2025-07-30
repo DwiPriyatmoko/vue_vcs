@@ -1,4 +1,12 @@
 <script setup>
+// defineOptions({
+//   inheritAttrs: false,
+// });
+
+import { useAttrs } from 'vue';
+const attrs = useAttrs();
+console.log(attrs.class);
+
 const { title, disabled } = defineProps({
   title: {
     type: String,
@@ -16,6 +24,7 @@ const enableStyle = '#fff';
 
 <template>
   <button
+    v-bind="$attrs"
     :disabled
     class="button"
     :class="{ disabled: disabled }"

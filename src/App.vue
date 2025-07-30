@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue';
-// import MainButton from './components/MainButton.vue';
+import MainButton from './components/MainButton.vue';
 
 // const disabled = ref(false);
 // const toDisable = () => {
@@ -20,6 +20,9 @@ const increment = (counter) => {
   </button>
 
   <input @keyup.enter="() => console.log('Enter pressed')" placeholder="Press Enter" />
+  <br />
+  <br />
+  <MainButton class="my-btn" @click="increment(1)" />
 </template>
 
 <style scoped></style>
